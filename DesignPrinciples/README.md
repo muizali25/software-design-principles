@@ -9,7 +9,6 @@ This repository is built for a **Senior .NET Backend Engineer** portfolio. It sh
 * SOLID
 * Clean code thinking
 * Maintainability
-* Testability
 * Separation of concerns
 * Dependency management
 * Object-oriented design
@@ -32,8 +31,6 @@ Principle
 Refactoring
   ↓
 Solution
-  ↓
-Tests
   ↓
 Real-world Usage
   ↓
@@ -76,9 +73,6 @@ Trade-offs
 
 * [Principles overview](docs/principles.md)
 * [Repository architecture](docs/architecture.md)
-* [Interview questions](docs/interview-questions.md)
-* [Interview cheatsheet](docs/interview-cheatsheet.md)
-* [Portfolio presentation guide](docs/portfolio-guide.md)
 
 ## How to run
 
@@ -87,7 +81,6 @@ Requires the [.NET 9 SDK](https://dotnet.microsoft.com/download).
 ```powershell
 # From the DesignPrinciples folder
 dotnet build DesignPrinciples.sln
-dotnet test DesignPrinciples.sln
 
 # Run a single example
 dotnet run --project src/01-SRP/01-SRP.csproj
@@ -103,12 +96,9 @@ DesignPrinciples/
 ├── README.md
 ├── DesignPrinciples.sln
 ├── docs/
-├── src/
-│   ├── 01-SRP/
-│   ├── 02-OCP/
-│   └── ...
-└── tests/
-    ├── 01-SRP.Tests/
+└── src/
+    ├── 01-SRP/
+    ├── 02-OCP/
     └── ...
 ```
 
@@ -118,7 +108,6 @@ Each principle is an independent console app with:
 * `Good/` — focused refactor
 * `Program.cs` — short demo
 * `README.md` — full design write-up
-* Matching xUnit project under `tests/`
 
 ## Design philosophy
 
@@ -127,12 +116,10 @@ Principles are tools, not commandments.
 * Prefer the **smallest design that makes the next change safer**
 * Introduce abstractions at **real boundaries**
 * Document **trade-offs** when a principle would create noise
-* Prove behavior with **meaningful tests**, not coverage theater
 
 ## Tech stack
 
 * C# / .NET 9
 * Console applications
-* xUnit
 * Nullable reference types
 * No external APIs, databases, or unnecessary frameworks
